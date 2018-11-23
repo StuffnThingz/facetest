@@ -13,7 +13,6 @@
     <link href="css/demo.css" rel="stylesheet" type="text/css" />
 
     <!-- JQuery -->
-    
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -63,19 +62,19 @@
         <div class="col loading-state">
             <div class="loader"></div>
             <br>
-            <p id="starting-message">This demo requires your webcam, please make sure it is enabled.</p>
+            <p id="starting-message">Loading...</p>
             <div class="demo-message" id="msg-starting-webcam">
                 Connecting to webcam...
             </div>
             <div class="demo-message" id="msg-detector-status">
-                Loading the emotion detector. This may take a few minutes ...
+                Loading emotion detector...
             </div>
 
         </div>
     </div>
 
     <!-- Page Errors -->
-    <!-- <div class="row d-none align-items-center justify-content-center full-height" id="error-row">
+    <div class="row d-none align-items-center justify-content-center full-height" id="error-row">
         <div class="col-md-6 demo-message" id="msg-webcam-failure">
             <div class="alert alert-danger align-self-center" role="alert"><strong>Failed to connect to webcam.</strong><br> Please make sure your webcam is not being used by any other apps.</div>
         </div>
@@ -85,7 +84,7 @@
         <div class="col-md-6 offset-md-3 demo-message" id="msg-player-failure">
             <div class="alert alert-warning" role="alert"><strong>Error: </strong>There was a problem with the youtube player. Please try reloading the page again.</div>
         </div>
-    </div> -->
+    </div>
 
     <div id="text-width"></div>
     <div id="lightbox"></div>
@@ -102,9 +101,9 @@
         <div class="col-md-8 offset-md-2" id="instructions">
             <div class="card my-3">
                 <div class="card-body">
-                    <p class="card-text">Welcome to Affectiva's JavaScript SDK Demo.</p>
-                    <p class="card-text">This demo uses your webcam and Affectiva's JavaScript SDK to analyze your emotions as you watch a YouTube video.</p>
-                    <p class="card-text">Simply search for a YouTube video or insert a video URL in the search bar below to get started.</p>
+                    <!-- <p class="card-text">Welcome to Affectiva's JavaScript SDK Demo.</p> -->
+                    <!-- <p class="card-text">This demo uses your webcam and Affectiva's JavaScript SDK to analyze your emotions as you watch a YouTube video.</p> -->
+                    <!-- <p class="card-text">Simply search for a YouTube video or insert a video URL in the search bar below to get started.</p> -->
                     <div class="form-group">
                         <div class="input-group">
                             <input type="text" class="form-control" id="start-form" placeholder="Enter a URL or search YouTube here..." autofocus>
@@ -116,13 +115,13 @@
                 </div>
             </div>
             <div class="card my-3 list-group" id="search-results" style="display: none;"></div>
-            <div class="card my-3">
+            <!-- <div class="card my-3">
                 <div class="card-body">
                     <p>Here are some selected videos to get you started:</p>
                     <div class="row justify-content-center no-gutters" id="example-container">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -137,27 +136,27 @@
                 </div>
             </div>
            <div class="row" id="svg-container">
-                <!-- <div class="col-lg-2">
-                    <ul class="nav d-flex flex-lg-column justify-content-center">
+                <div class="col-lg-2">
+                    <ul class="nav d-flex flex-lg-row justify-content-center">
                         <li class="nav-item all buttons all-box box-squared selected" id="all"><p> &#x1F610; Show all</p></li>
-                        <li class="nav-item joy buttons joy-box box-squared" id="joy"><p>&#x1F603; Joy</p></li>
-                        <li class="nav-item anger buttons angry-face anger-box box-squared" id="anger"><span>&#x1F620; Anger</span></li>
-                        <li class="nav-item disgust buttons disgusted-face disgust-box box-squared" id="disgust"><span>&#x1F601; Disgust</span></li>
-                        <li class="nav-item contempt buttons contempt-face contempt-box box-squared" id="contempt"><span>&#x1F60F; Contempt</span></li>
-                        <li class="nav-item surprise buttons surprise-face surprise-box box-squared" id="surprise"><span>&#x1F62F; Surprise</span></li>
+                        <li class="nav-item joy buttons joy-box box-squared" id="joy"><p>Joy</p></li>
+                        <li class="nav-item anger buttons angry-face anger-box box-squared" id="anger"><p>Anger</p></li>
+                        <li class="nav-item disgust buttons disgusted-face disgust-box box-squared" id="disgust"><span> Disgust</span></li>
+                        <li class="nav-item contempt buttons contempt-face contempt-box box-squared" id="contempt"><span>Contempt</span></li>
+                        <li class="nav-item surprise buttons surprise-face surprise-box box-squared" id="surprise"><span>Surprise</span></li>
                     </ul>
-                </div> -->
+                </div>
                 <div id="svg-wrapper" class="col-lg-8 text-center" style>
                     <svg id="svg-curve"></svg>
                 </div>
-                <!-- <div id="play-again" class="col-lg-2">
+                <div id="play-again" class="col-lg-2">
                   <div class="well">
                     <p>Frame capture complete!</p>
                     <p><small>Watch the video synchronized with your emotions.</small></p>
                     <p>&nbsp;</p>
                     <button id="btn-play-again" class="btn btn-primary">Ok, got it</button>
                   </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>

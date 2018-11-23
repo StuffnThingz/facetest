@@ -9,6 +9,7 @@ function AsyncPlayer() {
   let invokerState = (e) => current_state_change_handle(e);
   let invokerError = (e) => current_error_handle(e);
 
+
   //Event Handlers
   let current_state_change_handle = (e) => {};
   let current_error_handle = (e) => {};

@@ -34,7 +34,7 @@ h3 {
 #facevideo-node {
     width: 642px;
     height: 482px;
-    display: inline; /* Never display this face video*/
+    display: none; /* Never display this face video*/
 }
 
 #instructions {
@@ -69,19 +69,18 @@ h3 {
     display: none;
 }
 
-/* Changes I made Nov. 22 */
-
-/* #video-wrapper {
+#video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
-} */
+}
 
-/* #video-wrapper iframe {
+#video-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; */
+    height: 100%;
+    padding: 50px;
 }
 
 #svg-wrapper {
@@ -94,7 +93,7 @@ h3 {
 
 #svg-curve {
     width: 100%;
-    height: 500px;
+    height: 250px;
 }
 
 line.cursor {
@@ -178,6 +177,7 @@ text.time {
 .all-box {
     background: #696969;
     color:white;
+    display: none;
 }
 .joy-box {
     background: #2ee65d;
@@ -227,21 +227,18 @@ text.time {
     font-size: 14pt;
 }
 
-
 .full-height {
     height: 100vh;
-
 }
 
 .loader {
-    border: 7px solid #f3f3f3; /* Light grey */
-    border-top: 7px solid #E80089; /* Blue */
+    border: 7px solid #fc4627; /* Light grey */
+    border-top: 7px solid #ffd000; /* Blue */
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 1.5s linear infinite;
     margin: 0 auto;
-    padding: inherit;
 }
 
 @keyframes spin {
