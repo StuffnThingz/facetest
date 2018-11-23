@@ -1,8 +1,10 @@
-# Emotion-enabled YouTube Demo
+Tobin's changes
+
+<!-- # Emotion-enabled YouTube Demo
 
 This demo uses Affectiva's JavaScript SDK to analyze your emotions as you watch a YouTube video. Search a YouTube video by keyword or enter its URL, and with your webcam turned on, you'll be able to see your emotions both during the video and during playback. The code is written entirely in JavaScript, HTML, and CSS. [d3](https://d3js.org/) was used to render the emotions graph.
 
-For more information about Affectiva's JavaScript SDK, visit http://developer.affectiva.com/. 
+For more information about Affectiva's JavaScript SDK, visit http://developer.affectiva.com/.
 
 ## Try it Now!
 
@@ -32,13 +34,13 @@ $ python
 #### Python 2.x
 
 ```
-$ python -m SimpleHTTPServer 8000 
+$ python -m SimpleHTTPServer 8000
 ```
 
 #### Python 3.x
 
 ```
-$ python -m http.server 8000 
+$ python -m http.server 8000
 ```
 
 Once the server is up, open a web browser and navigate to [http://localhost:8000/](http://localhost:8000/). The demo should start loading.
@@ -53,7 +55,7 @@ This component supports simple interfacing with the graph. It supports a number 
 
 ### player.js
 
-This component implements an asynchronous way of interfacing with the YouTube Player, and should be relatively extensible to any other player you would want to fit. The `AsyncPlayer` object is actually a function that when initialized, takes the following arguments: `message`, `data` and `callback`. There are a number of messages that the player supports, and when it is finished processing those messages, it will call the `callback` with a `message` and `data` of it's own. Here's what it looks like: 
+This component implements an asynchronous way of interfacing with the YouTube Player, and should be relatively extensible to any other player you would want to fit. The `AsyncPlayer` object is actually a function that when initialized, takes the following arguments: `message`, `data` and `callback`. There are a number of messages that the player supports, and when it is finished processing those messages, it will call the `callback` with a `message` and `data` of it's own. Here's what it looks like:
 ```JavaScript
 const player = new AsyncPlayer();
 
@@ -87,12 +89,12 @@ If the player successfully loads, this snippet of code will print `loaded` to th
 
 ### index.js
 This is the controller for the main app. It binds together all of the components that make the demo work. It is separated into 4 phases, which correspond to different views on the client side:
-* `LOADING` - The demo alerts the user that it is initializing all of the scripts. 
+* `LOADING` - The demo alerts the user that it is initializing all of the scripts.
 * `SEARCHING` - The demo allows the user to search for a video to play.
 * `RECORDING` - The demo is recording your emotion data, and playing the video
 * `PLAYBACK` - The demo allows you to move a cursor on the graph around, with accompanying video playback.
 
-These states are accessible through the `Demo.States` enum. You can get the state of the current demo using `Demo.state()`. 
+These states are accessible through the `Demo.States` enum. You can get the state of the current demo using `Demo.state()`.
 
 This scripts implements a main `Demo` object that supports a `start()` method which intializes the demo.
 
@@ -100,4 +102,4 @@ This scripts implements a main `Demo` object that supports a `start()` method wh
 
 * Chrome 51 or higher
 * Firefox 47 or higher
-* Opera 37
+* Opera 37 -->
