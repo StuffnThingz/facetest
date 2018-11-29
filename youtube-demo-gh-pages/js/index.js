@@ -61,8 +61,9 @@ function Demo() {
 
   let player = AsyncPlayer();
   let graph = new Graph("#svg-curve");
-  let video_ids = ["EglYdO0k5nQ", "z63KGZE4rnM", "IV_ef2mm4G0", "dlNO2trC-mk", "lhzwmYRXPp4", "0kfLd52jF3Y"];
-
+  let video_ids = ["CMNry4PE93Y"];
+  // let video_ids = ["f-5P7OOfG3g"];
+// "IV_ef2mm4G0",
   /** ==============================================================
    *                      Pubilc Methods
    *  ============================================================== */
@@ -119,7 +120,7 @@ function Demo() {
     $("#error-row").removeClass("d-flex");
   };
 
-  
+
 
   /** Promise factory to load the Detector and bid the relevant callbacks. */
   const loadDetector = () => {
@@ -151,7 +152,7 @@ function Demo() {
 
           if (frames_since_last_face > face_alert_threshold && face_visible) {
             face_visible = false;
-            self.createAlert("no-face", "No face was detected. Please re-position your face and/or webcam.");
+            self.createAlert("no-face", "I CAN'T SEE YOU! PLEASE REPOSITION YOUR FACE.");
           }
           if (faces.length > 0) {
             if (!face_visible) {
@@ -272,7 +273,9 @@ function Demo() {
     initial_videos.forEach((video, index) => {
       const thumbnail_url = "https://i.ytimg.com/vi/" + video.id + "/mqdefault.jpg";
 
-      let JQVideoColumn = $(`<div class='col-${bp[0]} col-sm-${bp[1]} col-md-${bp[2]} col-lg-${bp[3]} col-xl-${bp[4]}'></div>`);
+
+      let JQVideoColumn = $(`<div class='col-${bp[0]}'></div>`);
+      // let JQVideoColumn = $(`<div class='col-sm-${bp[1]}'></div>`);
       let JQVideoNode =  $("<div class='example card m-1'></div>");
 
       JQVideoColumn.appendTo(example_container);
@@ -460,6 +463,7 @@ function Demo() {
       initializePlayback();
       $("#player").css("pointer-events", "");
       $("#play-again").fadeIn(500, () => {
+        console.log('end of stuff'); // Call function for screen capture
         $("#lightbox").one("click", allowPlayback);
       });
       $("#btn-play-again").one("click", allowPlayback);
@@ -489,9 +493,10 @@ function Demo() {
     let play_again_button = $("#btn-play-again");
 
     play_again_button.fadeOut(500,() => {
+      console.log('something');
       play_again_button.replaceWith(() => {
         return $("<button id='btn-play-again' class='btn btn-primary'>Try again</button>").fadeIn(500, () => {
-          setSpaceBarPlayBehvaior();
+          // setSpaceBarPlayBehvaior();
           $("#btn-play-again").one("click", () => {
             window.location.reload(false);
           });
@@ -501,17 +506,17 @@ function Demo() {
   };
 
   /** Add listeners for the spacebar, to allow controls for the video in playback. */
-  const setSpaceBarPlayBehvaior = () => {
-    document.onkeypress = (event) => {
-      if ((event || window.event).charCode == 32) {
-        if (player("getPlayingState")) {
-          player("pause");
-        } else {
-          player("resume");
-        }
-      }
-    };
-  };
+  // const setSpaceBarPlayBehvaior = () => {
+  //   document.onkeypress = (event) => {
+  //     if ((event || window.event).charCode == 32) {
+  //       if (player("getPlayingState")) {
+  //         player("pause");
+  //       } else {
+  //         player("resume");
+  //       }
+  //     }
+  //   };
+  // };
 
   /** Handler for `drag` event. */
   const dragHandler = () => {

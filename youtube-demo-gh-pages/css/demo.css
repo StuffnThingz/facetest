@@ -10,10 +10,14 @@ body {
     background-color: #111;
 }
 
-h3 {
-    padding: 0px;
+h1 {
+    padding: 5px;
     margin: 0px;
-    padding-bottom: 10px;
+    /* padding-bottom: px; */
+    color: #f44141;
+    font-family: fantasy;
+    font-size: 45px;
+    text-shadow: 2px 2px 8px #FF0000;
 }
 
 #lightbox {
@@ -42,19 +46,20 @@ h3 {
 }
 
 .thumbnail {
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-bottom: 0px;
 }
 
 .example {
     position: relative;
-    cursor: pointer;
-    /*width: 100%; */
+    /* cursor: pointer; */
+    width: 100%;
     padding-bottom: 56.25%;
     background-size: 100% 100%;
     background-color: #2f2f2f;
     text-align: center;
     border: 3px solid black;
+
 }
 .video-text {
     position:  absolute;
@@ -133,7 +138,7 @@ text.time {
     margin-bottom: 0;
 }
 
-.buttons
+/* .buttons
 {
     display: inline-block;
     margin: 0.5em;
@@ -143,18 +148,18 @@ text.time {
     text-align: center;
 
     border: 3px solid transparent; /* This forces the border to be accomidated in the flow of the page, preventing the buttons acting weird*/
-}
+} */
 
-#nav li.buttons span {
+/* #nav li.buttons span {
     float: left;
     margin-left: 10px;
 }
 
 .selected {
     border: 3px solid #e1e1e1 !important;
-}
+} */
 
-.buttons:before
+/* .buttons:before
 {
     float: left;
     width: 1em;
@@ -162,28 +167,50 @@ text.time {
     font-size: 1.6em;
     padding: 0.05em;
     pointer-events: none;
-}
+} */
 
-.buttons:hover {
+/* .buttons:hover {
     cursor: pointer;
-}
+} */
 
-.box-squared {
+/* .box-squared {
     width: 110px;
     height: 35px;
     line-height: 28px;
-}
+} */
 
-.all-box {
+/* .all-box {
     background: #696969;
     color:white;
-    display: none;
+    display: none; */
+  /* } */
+
+
+
+.my-flex-container {
+  height: 100px;
+  margin-bottom: 20px;
+  display:inline-block;
+  float:none;
+
 }
+
+.my-flex-item {
+  height: 50px;
+  width: 150px;
+  margin: 15px;
+  text-align: center;
+  font-size: 1.6em;
+  padding: 0.05em;
+}
+
 .joy-box {
     background: #2ee65d;
+
 }
 .anger-box {
     background: #fc4627;
+
 }
 .contempt-box {
     background: #2bb3f7;

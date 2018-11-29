@@ -101,27 +101,26 @@
         <div class="col-md-8 offset-md-2" id="instructions">
             <div class="card my-3">
                 <div class="card-body">
-                    <!-- <p class="card-text">Welcome to Affectiva's JavaScript SDK Demo.</p> -->
-                    <!-- <p class="card-text">This demo uses your webcam and Affectiva's JavaScript SDK to analyze your emotions as you watch a YouTube video.</p> -->
-                    <!-- <p class="card-text">Simply search for a YouTube video or insert a video URL in the search bar below to get started.</p> -->
+                  <center><h1>Welcome to Painting With Emotions!</h1></center>
+
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="start-form" placeholder="Enter a URL or search YouTube here..." autofocus>
-                            <span class="input-group-btn">
-                                <button id="btn-start" class="btn btn-primary" type="button">Start</button>
-                            </span>
+
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="card my-3 list-group" id="search-results" style="display: none;"></div>
-            <!-- <div class="card my-3">
+            <div class="card my-3">
+
                 <div class="card-body">
-                    <p>Here are some selected videos to get you started:</p>
+
                     <div class="row justify-content-center no-gutters" id="example-container">
+
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 
@@ -136,28 +135,58 @@
                 </div>
             </div>
            <div class="row" id="svg-container">
-                <div class="col-lg-2">
-                    <ul class="nav d-flex flex-lg-row justify-content-center">
+                <!-- <div class="col-lg-2"> -->
+                    <!-- <ul class="nav d-flex flex-lg-row justify-content-center">
                         <li class="nav-item all buttons all-box box-squared selected" id="all"><p> &#x1F610; Show all</p></li>
-                        <li class="nav-item joy buttons joy-box box-squared" id="joy"><p>Joy</p></li>
-                        <li class="nav-item anger buttons angry-face anger-box box-squared" id="anger"><p>Anger</p></li>
+                        <li class="nav-item joy buttons joy-box box-squared" id="joy"><span>Joy</span></li>
+                        <li class="nav-item anger buttons angry-face anger-box box-squared" id="anger"><span>Anger</span></li>
                         <li class="nav-item disgust buttons disgusted-face disgust-box box-squared" id="disgust"><span> Disgust</span></li>
                         <li class="nav-item contempt buttons contempt-face contempt-box box-squared" id="contempt"><span>Contempt</span></li>
                         <li class="nav-item surprise buttons surprise-face surprise-box box-squared" id="surprise"><span>Surprise</span></li>
-                    </ul>
-                </div>
-                <div id="svg-wrapper" class="col-lg-8 text-center" style>
+                    </ul> -->
+                <!-- </div> -->
+
+                <!-- TRYING NEW CONTAINER FOR EMOTION COLOR BOXES -->
+
+
+                <div id="svg-wrapper" class="col-lg-8 text-center  offset-lg-2" style>
                     <svg id="svg-curve"></svg>
                 </div>
+
+                <!-- BUTTON STUFF -->
                 <div id="play-again" class="col-lg-2">
                   <div class="well">
-                    <p>Frame capture complete!</p>
-                    <p><small>Watch the video synchronized with your emotions.</small></p>
-                    <p>&nbsp;</p>
-                    <button id="btn-play-again" class="btn btn-primary">Ok, got it</button>
+                    <!-- <p>Frame capture complete!</p> -->
+                    <!-- <p><small>Watch the video synchronized with your emotions.</small></p> -->
+                    <!-- <p>&nbsp;</p> -->
+                    <button id="btn-play-again" class="btn btn-primary">Play Again</button>
                   </div>
                 </div>
+
+
             </div>
+
+            <!-- <div class="container">
+              <div class="d-flex flex-row my-flex-container">
+
+              </div>
+
+            </div> -->
+
+            <div class="container">
+              <div class="row justify-content-center my-flex-container">
+                <div class="p-2 my-flex-item joy-box">Joy</div>
+                <div class="p-2 my-flex-item anger-box">Anger</div>
+                <div class="p-2 my-flex-item disgust-box">Disgust</div>
+                <div class="p-2 my-flex-item contempt-box">Contempt</div>
+                <div class="p-2 my-flex-item surprise-box">Surprise</div>
+              </div>
+
+            </div>
+
+
+            </div>
+
         </div>
     </div>
 </div>
